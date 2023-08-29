@@ -7,6 +7,22 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
+//   console.log(data.planets);
+ const getMoonCount =  data.planets.filter(function(planet){
+    if(planet.moonsCount < 10  || !planet.moonsCount) {
+        // console.log(planet.moonsCount);
+        console.log(planet.name);
+        return planet.name;
+        //this part of the function still returns full objects
+    }
+      
+  })
+  console.log("this is getMoonCount: ", getMoonCount);
+//   map through and get the name of each object
+ return getMoonCount.map(function(planet) {
+     console.log(planet.name);
+    return planet.name;
+ })
 }
 
 // === TEST YOURSELF ===

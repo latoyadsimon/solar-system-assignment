@@ -6,6 +6,23 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+//   console.log(data.planets);
+//   get all the moonCount values and add them
+let allMoonCounts = data.planets.map(function(planet) {
+    if(!planet.moonsCount) {
+        return 0;
+    }else{
+        return planet.moonsCount;
+    }
+    
+})
+console.log("this is allMoonCounts: ", allMoonCounts);
+const addedUp = allMoonCounts.reduce(function(acc, currVal) {
+    return acc + currVal;
+}, 0);
+console.log("this is addedUp: ",addedUp);
+return addedUp;
+
 }
 
 

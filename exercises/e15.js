@@ -6,6 +6,16 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
+//   console.log(data.planets);
+  return data.planets.filter(function(planet) {
+    if(!planet.moons) {
+        // console.log(planet.name);
+        return planet.name;
+    }
+  }).map(function(value) {
+    console.log(value.name);
+    return value.name;
+  })
 }
 
 

@@ -6,6 +6,14 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
+  console.log(data.planets);
+  return data.planets
+    .filter(function(planet) {
+        return planet.moons;
+    })
+    .map(function(value) {
+        return value.name;
+    })
 }
 
 

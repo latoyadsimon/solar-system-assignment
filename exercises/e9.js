@@ -6,6 +6,16 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
+//   console.log(data.planets);
+  return data.planets.find(function(planet) {
+    console.log(planet.name === "Earth");
+    if(planet.name === "Earth") {
+        console.log(planet);
+        return planet;
+    }
+    //return planet.name only returned boolean values
+    // return planet.name === "Earth";
+  })
 }
 
 
