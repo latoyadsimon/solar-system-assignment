@@ -1,20 +1,24 @@
 import { data } from "../data/data";
 
-// SPACE DATA EXERCISE 5
-// Return an array with all Planets' names with a massValue greater or equal to a given number (1-7)
+// SPACE DATA EXERCISE 7
+// Return an array of all Planets names that have moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithMassValue(data, number) {
+export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
-  
+  console.log(data.planets);
   return data.planets
-    .filter((planet) => planet.mass.massValue >= number)
-    .map((value) => value.name);
+    .filter(function(planet) {
+        return planet.moons;
+    })
+    .map(function(value) {
+        return value.name;
+    })
 }
 
 
 
 // === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-5"
+// Once you're finished run the test with "npm run test-7"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function

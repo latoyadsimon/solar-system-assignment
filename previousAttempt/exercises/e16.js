@@ -11,15 +11,23 @@
 
 export function find(array, callback) {
   // Your code goes here...
+  console.log("this is the array", array);
+  console.log("this is the callback: ", callback);
+
   let returnArray = [];
 
   for (let element of array) {
+    // Only if the callback that we apply returns something truthy, does it get pushed into the new array
     if (callback(element)) {
       returnArray.push(element);
     }
+
   }
+console.log("this is returnArray: ", returnArray);
+console.log("this is the first answer returned: ", returnArray[0]);
   return returnArray[0];
 
+  
 }
 
 

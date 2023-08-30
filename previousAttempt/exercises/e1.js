@@ -1,18 +1,23 @@
 import { data } from "../data/data";
 
-// SPACE DATA EXERCISE 7
-// Return an array of all Planets names that have moons
+// SPACE DATA EXERCISE 1
+// Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsNamesWithMoons(data) {
+export function getPlanetNames(data) {
   // Your code goes here...
+//   console.log(data);
+// const planets = data.planets;
+return data.planets.map(function(planet){
+    console.log(planet.name);
+    return planet.name;
+})
 
-  return data.planets
-    .filter((planet) => planet.moons)
-    .map((value) => value.name);
 }
 
+
+
 // === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-7"
+// Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function

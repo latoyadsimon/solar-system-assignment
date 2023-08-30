@@ -10,31 +10,52 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
+  console.log("starting array: ", array);
   let returnArray = [array[0]];
-  
-  for (let element of array) {
+  console.log("returnArray for minBy at start: ", returnArray);
 
+  for (let element of array) {
+    // Only if the callback that we apply returns something truthy, does it get pushed into the new array
+    console.log("this is element: ", element);
+    
     if (cb(element) < cb(returnArray[0])) {
+        console.log("this is cb(element): ", cb(element));
+        console.log("this is returnArray[0]: ", cb(returnArray[0]));
         returnArray[0] = element;
     }
+console.log("this is current returnArray for minBy: ", returnArray);
+
+  
   }
-  return returnArray[0];
+  console.log("the last returnArray: ", returnArray);
+return returnArray[0];
 
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
+  console.log("starting array: ", array);
   let returnArray = [array[0]];
-  
+  console.log("returnArray for maxBy at start: ", returnArray);
+
   for (let element of array) {
-   
+    // Only if the callback that we apply returns something truthy, does it get pushed into the new array
+    console.log("this is element: ", element);
+    
     if (cb(element) > cb(returnArray[0])) {
+        console.log("this is cb(element): ", cb(element));
+        console.log("this is returnArray[0]: ", cb(returnArray[0]));
         returnArray[0] = element;
     }
+console.log("this is current returnArray for maxBy: ", returnArray);
+
+  
   }
-  return returnArray[0];
+  console.log("the last returnArray: ", returnArray);
+return returnArray[0];
 
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
